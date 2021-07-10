@@ -7,23 +7,17 @@
     <body>
         <h1>Vue.js</h1>
         <div id="app">
-            {{ message. * 1.08 + '円' }}
+            <p v-html="message"></p>
         </div>
-        <hr>
-        <input type="text" onInput="doAction(event);">
         <script>
             var data = {
-                message: 'please type!'
-            };
+                message: '<h2 style="color:red;">vue.js sample message</h2>'
+            }
 
             var app = new Vue({
                 el: '#app',
                 data: data
             })
-
-            function doAction(event) {
-                data.message = event.target.value;
-            }
         </script>
     </body>
 </html>
